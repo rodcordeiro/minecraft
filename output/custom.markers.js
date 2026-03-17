@@ -114,6 +114,18 @@ UnminedCustomMarkers = {
             font: "bold 18px Calibri,sans serif",
         },
         {
+            x: 426,
+            z: -29,
+            image: "custom.pin.png",
+            imageAnchor: [0.5, 1],
+            imageScale: 0.5,
+            text: "Torre dos Espinhos (Farm)",
+            textColor: "#86efac",
+            offsetX: 0,
+            offsetY: 20,
+            font: "bold 18px Calibri,sans serif",
+        },
+        {
             x: -424,
             z: -184,
             image: "custom.pin.png",
@@ -207,6 +219,17 @@ UnminedCustomRailways = {
                 [140, -150],
                 [140, -360],
                 [344, -360],
+            ],
+        },
+        {
+            name: "Ramal Torre dos Espinhos",
+            color: "#34d399",
+            width: 3,
+            stations: true,
+            points: [
+                [140, -150],
+                [426, -150],
+                [426, -29],
             ],
         },
         {

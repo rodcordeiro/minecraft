@@ -128,6 +128,26 @@
       "dimension": "overworld",
       "createdAt": "2026-03-17T13:59:58.415Z",
       "updatedAt": "2026-03-17T13:59:58.415Z"
+    },
+    {
+      "id": "0decfeef-89fb-417b-a1c8-fffabb6d6848",
+      "name": "Torre dos Espinhos",
+      "type": "farm",
+      "x": 426,
+      "z": -29,
+      "description": "Farm em torre de bambu, madeira e cactos, registrada proxima de X 426 / Z -29 como extensao produtiva do eixo leste da malha ferroviaria.",
+      "tags": [
+        "usuario",
+        "farm",
+        "bambu",
+        "cacto",
+        "madeira",
+        "tormenta",
+        "tower"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-17T16:21:04.240Z",
+      "updatedAt": "2026-03-17T16:21:04.240Z"
     }
   ]
 }
