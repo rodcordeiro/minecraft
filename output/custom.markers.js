@@ -141,3 +141,242 @@ UnminedCustomMarkers = {
         // do not delete the following two closing brackets
     ]
 }
+
+UnminedCustomRailways = {
+    isEnabled: true,
+    routes: [
+        {
+            name: "Linha Tronco Norte",
+            color: "#f59e0b",
+            width: 4,
+            stations: true,
+            points: [
+                [7, -36],
+                [7, -150],
+            ],
+        },
+        {
+            name: "Ramal Reduto dos Colonos",
+            color: "#86efac",
+            width: 3,
+            stations: true,
+            points: [
+                [7, -150],
+                [-145, -150],
+                [-145, -166],
+            ],
+        },
+        {
+            name: "Ramal Forja da Aurora",
+            color: "#fca5a5",
+            width: 3,
+            stations: true,
+            points: [
+                [7, -150],
+                [140, -150],
+            ],
+        },
+        {
+            name: "Ramal Alvorada Branca",
+            color: "#fde047",
+            width: 3,
+            stations: true,
+            points: [
+                [-145, -166],
+                [-145, -296],
+                [-296, -296],
+            ],
+        },
+        {
+            name: "Extensao Ermo da Neve",
+            color: "#c4b5fd",
+            width: 3,
+            stations: true,
+            points: [
+                [-296, -296],
+                [-296, 296],
+                [-360, 296],
+            ],
+        },
+        {
+            name: "Ramal Pinhal de Valkaria",
+            color: "#93c5fd",
+            width: 3,
+            stations: true,
+            points: [
+                [140, -150],
+                [140, -360],
+                [344, -360],
+            ],
+        },
+        {
+            name: "Linha de Expedicao da Bruxa",
+            color: "#e879f9",
+            width: 3,
+            stations: true,
+            lineDash: [20, 10],
+            points: [
+                [7, -36],
+                [7432, -36],
+                [7432, -2840],
+            ],
+        },
+    ],
+};
+
+/**
+ * Cria a camada vetorial das ferrovias personalizadas.
+ * @param {Unmined} unmined
+ * @param {{ isEnabled: boolean, routes: Array<any> }} railways
+ * @returns {ol.layer.Vector | null}
+ */
+function createCustomRailwaysLayer(unmined, railways) {
+    if (!railways || !railways.isEnabled || !railways.routes || railways.routes.length === 0) {
+        return null;
+    }
+
+    const features = [];
+
+    for (const route of railways.routes) {
+        const transformedPoints = route.points.map((point) =>
+            ol.proj.transform(point, unmined.dataProjection, unmined.viewProjection)
+        );
+
+        const lineFeature = new ol.Feature({
+            geometry: new ol.geom.LineString(transformedPoints),
+        });
+
+        lineFeature.setStyle(
+            new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: route.color || "#f59e0b",
+                    width: route.width || 4,
+                    lineDash: route.lineDash || [12, 8],
+                }),
+            })
+        );
+
+        features.push(lineFeature);
+
+        if (!route.stations) {
+            continue;
+        }
+
+        for (const point of transformedPoints) {
+            const stationFeature = new ol.Feature({
+                geometry: new ol.geom.Point(point),
+            });
+
+            stationFeature.setStyle(
+                new ol.style.Style({
+                    image: new ol.style.Circle({
+                        radius: 5,
+                        fill: new ol.style.Fill({
+                            color: route.color || "#f59e0b",
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: "#111827",
+                            width: 2,
+                        }),
+                    }),
+                })
+            );
+
+            features.push(stationFeature);
+        }
+    }
+
+    return new ol.layer.Vector({
+        source: new ol.source.Vector({
+            features: features,
+        }),
+    });
+}
+
+/**
+ * Instala um hook no ciclo de criacao dos marcadores do uNmINeD para anexar a camada de ferrovias.
+ * @returns {void}
+ */
+function installCustomRailwaysHook() {
+    if (typeof Unmined === "undefined" || !Unmined.prototype || Unmined.prototype.__customRailwaysHookInstalled) {
+        return;
+    }
+
+    const originalCreateMarkersLayer = Unmined.prototype.createMarkersLayer;
+
+    Unmined.prototype.createMarkersLayer = function (markers) {
+        const layer = originalCreateMarkersLayer.call(this, markers);
+
+        if (!this.__customRailwaysAdded && this.olMap) {
+            const railwaysLayer = createCustomRailwaysLayer(this, UnminedCustomRailways);
+            if (railwaysLayer) {
+                this.olMap.addLayer(railwaysLayer);
+                this.__customRailwaysAdded = true;
+            }
+        }
+
+        return layer;
+    };
+
+    Unmined.prototype.__customRailwaysHookInstalled = true;
+}
+
+/**
+ * Gera marcadores de texto ao longo das rotas para garantir visualizacao da ferrovia.
+ * @param {{ routes: Array<any> }} railways
+ * @returns {Array<any>}
+ */
+function buildRailwayMarkers(railways) {
+    if (!railways || !railways.isEnabled || !railways.routes) {
+        return [];
+    }
+
+    const markers = [];
+
+    for (const route of railways.routes) {
+        const step = route.markerStep || 32;
+
+        for (let i = 0; i < route.points.length - 1; i++) {
+            const [startX, startZ] = route.points[i];
+            const [endX, endZ] = route.points[i + 1];
+
+            if (startX !== endX && startZ !== endZ) {
+                continue;
+            }
+
+            const deltaX = endX - startX;
+            const deltaZ = endZ - startZ;
+            const distance = Math.max(Math.abs(deltaX), Math.abs(deltaZ));
+            const dirX = deltaX === 0 ? 0 : deltaX / Math.abs(deltaX);
+            const dirZ = deltaZ === 0 ? 0 : deltaZ / Math.abs(deltaZ);
+
+            for (let offset = step; offset < distance; offset += step) {
+                markers.push({
+                    x: startX + dirX * offset,
+                    z: startZ + dirZ * offset,
+                    text: "+",
+                    textColor: route.color || "#f59e0b",
+                    textStrokeColor: "#111827",
+                    textStrokeWidth: 2,
+                    offsetX: 0,
+                    offsetY: 0,
+                    font: "bold 18px Calibri,sans serif",
+                });
+            }
+        }
+    }
+
+    return markers;
+}
+
+if (typeof UnminedMapProperties !== "undefined" && UnminedMapProperties.markers) {
+    const originalConcat = Array.prototype.concat;
+    UnminedMapProperties.markers.concat = function () {
+        installCustomRailwaysHook();
+        return originalConcat.apply(this, arguments);
+    };
+}
+
+if (UnminedCustomMarkers && Array.isArray(UnminedCustomMarkers.markers)) {
+    UnminedCustomMarkers.markers = UnminedCustomMarkers.markers.concat(buildRailwayMarkers(UnminedCustomRailways));
+}

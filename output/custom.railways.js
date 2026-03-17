@@ -4,15 +4,33 @@ UnminedCustomRailways = {
 
     routes: [
         {
-            name: "Linha Tronco Sul",
+            name: "Linha Tronco Norte",
             color: "#f59e0b",
             width: 4,
             stations: true,
             points: [
                 [7, -36],
-                [-145, -36],
+                [7, -150],
+            ],
+        },
+        {
+            name: "Ramal Reduto dos Colonos",
+            color: "#86efac",
+            width: 3,
+            stations: true,
+            points: [
+                [7, -150],
+                [-145, -150],
                 [-145, -166],
-                [140, -166],
+            ],
+        },
+        {
+            name: "Ramal Forja da Aurora",
+            color: "#fca5a5",
+            width: 3,
+            stations: true,
+            points: [
+                [7, -150],
                 [140, -150],
             ],
         },
@@ -28,6 +46,17 @@ UnminedCustomRailways = {
             ],
         },
         {
+            name: "Extensao Ermo da Neve",
+            color: "#c4b5fd",
+            width: 3,
+            stations: true,
+            points: [
+                [-296, -296],
+                [-296, 296],
+                [-360, 296],
+            ],
+        },
+        {
             name: "Ramal Pinhal de Valkaria",
             color: "#93c5fd",
             width: 3,
@@ -36,6 +65,18 @@ UnminedCustomRailways = {
                 [140, -150],
                 [140, -360],
                 [344, -360],
+            ],
+        },
+        {
+            name: "Linha de Expedicao da Bruxa",
+            color: "#e879f9",
+            width: 3,
+            stations: true,
+            lineDash: [20, 10],
+            points: [
+                [7, -36],
+                [7432, -36],
+                [7432, -2840],
             ],
         },
     ],

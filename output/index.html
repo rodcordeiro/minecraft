@@ -27,7 +27,6 @@
 
     <!-- Custom markers -->
     <script type="text/javascript" src="custom.markers.js"></script>
-    <script type="text/javascript" src="custom.railways.js"></script>
 
     <!-- uNmINeD JS and CSS -->
     <script type="text/javascript" src="unmined.js"></script>
@@ -54,10 +53,6 @@
 
         const mapElement = document.getElementById('map');
         const unmined = new Unmined(mapElement, UnminedMapProperties, UnminedRegions);
-
-        if (typeof addCustomRailways === "function") {
-            addCustomRailways(unmined, UnminedCustomRailways);
-        }
 
 
     </script>
