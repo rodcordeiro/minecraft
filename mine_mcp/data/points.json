@@ -1,0 +1,133 @@
+{
+  "points": [
+    {
+      "id": "c7ec1b7a-1aa7-4f2a-b5fd-1ed9d5d4ff00",
+      "name": "Abrigo da Geada",
+      "type": "igloo",
+      "x": -424,
+      "z": -184,
+      "description": "Iglu isolado em regiao nevada, com atmosfera austera e sobrevivente.",
+      "tags": [
+        "usuario",
+        "tormenta",
+        "neve"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-16T14:16:00.000Z",
+      "updatedAt": "2026-03-16T14:16:00.000Z"
+    },
+    {
+      "id": "8dd3e532-9b15-4f64-a101-4dbd4c5b7d1c",
+      "name": "Alvorada Branca",
+      "type": "village",
+      "x": -296,
+      "z": -296,
+      "description": "Vila em snowy plains, com personalidade luminosa e resiliente, inspirada no tom de Tormenta.",
+      "tags": [
+        "usuario",
+        "snowy_plains",
+        "tormenta"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-16T14:16:00.000Z",
+      "updatedAt": "2026-03-16T14:16:00.000Z"
+    },
+    {
+      "id": "0ea74b79-e2e5-4fa7-8988-a0c545dfc394",
+      "name": "Cabana de bruxa",
+      "type": "witch_hut",
+      "x": 7432,
+      "z": -2840,
+      "description": "Cabana de bruxa informada pelo usuario nas coordenadas X/Y/Z 7432 ~ -2840.",
+      "tags": [
+        "usuario"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-16T14:12:31.767Z",
+      "updatedAt": "2026-03-16T14:12:31.767Z"
+    },
+    {
+      "id": "ee658400-ffee-4646-b67c-bac7af2d7a38",
+      "name": "Casa",
+      "type": "custom",
+      "x": 7,
+      "z": -36,
+      "description": "Casa do usuario informada nas coordenadas X/Y/Z 7 74 -36.",
+      "tags": [
+        "usuario",
+        "base"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-16T17:53:26.604Z",
+      "updatedAt": "2026-03-16T17:53:26.604Z"
+    },
+    {
+      "id": "a41347d9-0af2-4c78-a0bc-bfe4fd482ec3",
+      "name": "Ermo da Neve",
+      "type": "village",
+      "x": -360,
+      "z": 296,
+      "description": "Vila em snowy plains, com identidade de fronteira fria e aberta, em linha tematica de Tormenta.",
+      "tags": [
+        "usuario",
+        "snowy_plains",
+        "tormenta"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-16T14:12:31.774Z",
+      "updatedAt": "2026-03-16T14:16:00.000Z"
+    },
+    {
+      "id": "cd8f4d4d-459a-4bde-8ebb-eee6b59b7b8f",
+      "name": "Forja da Aurora",
+      "type": "farm",
+      "x": 140,
+      "z": -150,
+      "description": "IronFarm posicionada com distancia segura de vilas e da breeder, voltada a producao automatica de ferro.",
+      "tags": [
+        "usuario",
+        "farm",
+        "ferro",
+        "tormenta",
+        "ironfarm"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-17T13:59:58.522Z",
+      "updatedAt": "2026-03-17T13:59:58.522Z"
+    },
+    {
+      "id": "dcbe586c-2a44-4009-8f17-0a445e2289e6",
+      "name": "Pinhal de Valkaria",
+      "type": "village",
+      "x": 344,
+      "z": -360,
+      "description": "Vila em snowy taiga, cercada por coniferas geladas e com identidade heroica inspirada em Tormenta.",
+      "tags": [
+        "usuario",
+        "snowy_taiga",
+        "tormenta"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-16T14:12:31.784Z",
+      "updatedAt": "2026-03-16T14:16:00.000Z"
+    },
+    {
+      "id": "c8bb9358-f0a8-478c-b55d-fc59bb0504c0",
+      "name": "Reduto dos Colonos",
+      "type": "farm",
+      "x": -145,
+      "z": -166,
+      "description": "Villager breeder automatizada 5x5, posicionada entre a casa e Alvorada Branca, com distancia segura para reproducao de aldeoes.",
+      "tags": [
+        "usuario",
+        "farm",
+        "villager",
+        "tormenta",
+        "breeder"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-17T13:59:58.415Z",
+      "updatedAt": "2026-03-17T13:59:58.415Z"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "recipes": [
+    {
+      "id": "ironfarm-guide-1",
+      "name": "IronFarm",
+      "type": "farm",
+      "summary": "Farm de ferro compacta para overworld, baseada em aldeoes, com area separada para villagers e spawn controlado de golems.",
+      "resources": [
+        "20 camas",
+        "2 baus",
+        "4 funis",
+        "1 balde de lava",
+        "1 balde de agua ou bloco auxiliar para apoio",
+        "20 mesas de trabalho",
+        "Tochas para evitar spawn de mobs na area dos villagers",
+        "Vidro opcional para visualizar os golems",
+        "3 placas para segurar a lava"
+      ],
+      "process": [
+        "Escolha uma area a pelo menos 150 blocos de qualquer vila existente.",
+        "Abra um espaco de 7x7x6 para a area onde os iron golems vao nascer.",
+        "Abra um segundo espaco de 5x5x4 para alojar os villagers.",
+        "No fundo da area dos villagers, instale as 20 camas em duas fileiras. Para empilhar, use blocos temporarios, coloque uma cama acima da outra e remova o apoio para formar beliches.",
+        "Feche a parte superior das camas e crie a plataforma de circulacao dos villagers.",
+        "Abra um bloco em todo o perimetro da plataforma e preencha com as mesas de trabalho.",
+        "Coloque pelo menos uma tocha no piso da area dos villagers para impedir spawn indesejado de mobs.",
+        "Feche a area dos villagers e finalize a plataforma de coleta dos iron golems com funis, baus, placas e lava."
+      ],
+      "tags": [
+        "ferro",
+        "farm",
+        "villagers",
+        "golem"
+      ],
+      "createdAt": "2026-03-16T18:10:00.000Z",
+      "updatedAt": "2026-03-16T18:10:00.000Z"
+    },
+    {
+      "id": "31e651da-3141-4166-b694-7d767e6ee69a",
+      "name": "VillagerBreeder",
+      "type": "farm",
+      "summary": "Breeder automatizada de villagers em modulo 5x5 para overworld, com duas composteiras, area interna de cultivo e saida de bebe aldeao para coleta sem alimentacao manual recorrente.",
+      "resources": [
+        "3 camas",
+        "2 villagers",
+        "2 composteiras",
+        "modulo 5x5 de blocos de construcao",
+        "9 blocos de terra arada dentro do modulo",
+        "1 balde de agua",
+        "2 trapdoors",
+        "2 slabs",
+        "1 area de coleta ou corredor de queda para o bebe aldeao",
+        "luz suficiente para plantacao e seguranca",
+        "cenouras, batatas ou pao apenas para iniciar o ciclo, se necessario",
+        "1 barco ou minecart opcional para posicionamento inicial"
+      ],
+      "process": [
+        "Escolha uma area segura, no overworld, afastada da IronFarm ou de qualquer vila que possa disputar o vinculo das camas.",
+        "Monte um modulo principal de 5x5 com paredes que mantenham os dois villagers presos e com espaco interno para circulacao.",
+        "No centro do modulo, hidrate a area de cultivo com 1 bloco de agua e mantenha 9 blocos de terra arada ao redor para plantio.",
+        "Instale 3 camas com acesso valido para os villagers, preferencialmente na parte traseira ou superior do modulo, sem obstruir o caminho.",
+        "Coloque 2 composteiras dentro do modulo para incentivar os dois villagers a assumirem trabalho e manterem o ciclo de farming ativo.",
+        "Posicione 2 villagers adultos dentro da estrutura e garanta que pelo menos um deles consiga plantar e colher continuamente.",
+        "Crie uma saida baixa com trapdoors e slabs para que apenas o bebe aldeao consiga escapar para a area de coleta.",
+        "Direcione o bebe aldeao por queda curta, agua ou corredor simples para o local onde ele sera armazenado ou transportado.",
+        "Plante cenouras ou batatas na area interna; com cultivo ativo, os villagers passam a compartilhar comida entre si e a reproducao segue sem alimentacao manual recorrente.",
+        "Mantenha a estrutura iluminada e sem interferencia de outras camas ou job sites proximos para preservar a automacao."
+      ],
+      "tags": [
+        "villager",
+        "breeder",
+        "farm",
+        "aldeoes",
+        "automatico",
+        "5x5",
+        "overworld"
+      ],
+      "createdAt": "2026-03-16T18:38:09.207Z",
+      "updatedAt": "2026-03-16T18:42:07.195Z"
+    }
+  ]
+}
