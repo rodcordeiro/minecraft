@@ -4,6 +4,7 @@ import { z } from "zod";
 import { paths } from "./config.js";
 import { PointRepository } from "./repository/point-repository.js";
 import { RecipeRepository } from "./repository/recipe-repository.js";
+import { ExarotonService } from "./services/exaroton-service.js";
 import { MapService } from "./services/map-service.js";
 import { RecipeService } from "./services/recipe-service.js";
 
@@ -11,6 +12,7 @@ const pointRepository = new PointRepository(paths.dataFile);
 const recipeRepository = new RecipeRepository(paths.recipesFile);
 const mapService = new MapService(pointRepository);
 const recipeService = new RecipeService(recipeRepository);
+const exarotonService = new ExarotonService();
 
 const server = new McpServer({
   name: "mine_mcp",
@@ -43,6 +45,118 @@ server.registerResource(
       }
     ]
   })
+);
+
+server.registerResource(
+  "exaroton-context",
+  "mine-mcp://integrations/exaroton",
+  {
+    title: "exaroton integration context",
+    description: "Configuration state for the optional exaroton integration.",
+    mimeType: "application/json"
+  },
+  async () => ({
+    contents: [
+      {
+        uri: "mine-mcp://integrations/exaroton",
+        mimeType: "application/json",
+        text: JSON.stringify(
+          {
+            configured: Boolean(process.env.EXAROTON_API_TOKEN),
+            defaultServerId: process.env.EXAROTON_SERVER_ID || null,
+            capabilities: [
+              "account",
+              "list_servers",
+              "server_overview",
+              "configured_ram"
+            ],
+            notes: [
+              "The exaroton Node client and official docs expose richer websocket streams for status, stats, heap and tick times.",
+              "This MCP increment currently focuses on safe read-only REST snapshots."
+            ]
+          },
+          null,
+          2
+        )
+      }
+    ]
+  })
+);
+
+server.tool(
+  "exaroton_get_account",
+  "Return exaroton account information using EXAROTON_API_TOKEN.",
+  {},
+  async () => {
+    const account = await exarotonService.getAccount();
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(account, null, 2)
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_list_servers",
+  "List exaroton servers visible to the configured account.",
+  {},
+  async () => {
+    const servers = await exarotonService.listServers();
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(servers, null, 2)
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_get_server",
+  "Return an exaroton server overview with status name and configured RAM when available.",
+  {
+    serverId: z.string().min(1).optional()
+  },
+  async ({ serverId }) => {
+    const server = await exarotonService.getServer(serverId);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(server, null, 2)
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_get_server_ram",
+  "Return the configured exaroton server RAM in GiB.",
+  {
+    serverId: z.string().min(1).optional()
+  },
+  async ({ serverId }) => {
+    const ram = await exarotonService.getServerRam(serverId);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify({ ramGb: ram }, null, 2)
+        }
+      ]
+    };
+  }
 );
 
 server.tool(

@@ -36,6 +36,47 @@
       "updatedAt": "2026-03-16T18:10:00.000Z"
     },
     {
+      "id": "4db26b2b-9333-49ba-8783-e0facae1ac06",
+      "name": "MobFarm Torre 16x16",
+      "type": "farm",
+      "summary": "Mobfarm simples em torre para overworld/Bedrock, com plataforma unica de 16x16, camara de spawn escura, queda de 20 blocos e coleta no solo.",
+      "resources": [
+        "256 blocos solidos para a plataforma de spawn 16x16",
+        "Aproximadamente 180 a 220 blocos solidos para paredes, teto, torre e base de coleta",
+        "64 alcapoes para reduzir area util e melhorar o caminho dos mobs",
+        "8 a 12 placas ou botões para evitar agua escapando ou spawn indesejado em pontos criticos",
+        "4 funis",
+        "2 baus ou 1 baú duplo",
+        "4 baldes de agua",
+        "Tochas para iluminar lado de fora e o entorno",
+        "1 escada ou andaime para construir e acessar o topo",
+        "Espadas ou tridente para finalizacao manual, se a queda nao matar todos"
+      ],
+      "process": [
+        "Escolha um ponto afastado da base e monte uma torre central de 20 blocos de altura a partir do nivel da coleta.",
+        "No topo da torre, construa uma plataforma quadrada de 16x16 e feche as laterais com paredes de 2 blocos de altura para formar a camara de spawn.",
+        "Feche a camara com um teto para bloquear luz e mantenha o interior completamente escuro.",
+        "Abra ou reserve no centro da plataforma uma queda de 2x2 para levar os mobs ao poço central.",
+        "Leve 4 correntes de agua das bordas em direcao ao centro, de forma que os mobs sejam empurrados para o buraco 2x2.",
+        "Instale alcapoes nas bordas internas dos canais e ao redor do buraco central para que os mobs tentem caminhar sobre o vazio e caiam com mais frequencia.",
+        "Na base da torre, prepare a area de queda e coleta com funis ligados a baus.",
+        "Se quiser farm estritamente simples, deixe a queda de 20 blocos e finalize os mobs manualmente no fundo; se depois quiser automatizar, adapte a base para trident killer.",
+        "Ilumine bem o teto, o lado de fora da estrutura e o chao ao redor para reduzir spawn concorrente fora da camara.",
+        "Teste a farm a noite ou em area controlada e ajuste a altura da queda caso os mobs estejam sobrevivendo com vida demais ou morrendo antes da coleta desejada."
+      ],
+      "tags": [
+        "farm",
+        "mob",
+        "torre",
+        "hostile",
+        "bedrock",
+        "overworld",
+        "16x16"
+      ],
+      "createdAt": "2026-03-18T14:17:18.106Z",
+      "updatedAt": "2026-03-18T14:17:18.106Z"
+    },
+    {
       "id": "31e651da-3141-4166-b694-7d767e6ee69a",
       "name": "VillagerBreeder",
       "type": "farm",

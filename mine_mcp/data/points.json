@@ -22,7 +22,7 @@
       "type": "village",
       "x": -296,
       "z": -296,
-      "description": "Vila em snowy plains, com personalidade luminosa e resiliente, inspirada no tom de Tormenta.",
+      "description": "Vila em snowy plains, com personalidade luminosa e resiliente, inspirada no tom de Tormenta. Lore: \"No gelo eterno, onde poucos prosperam, a luz nao vem do ceu — ela nasce do esforco dos homens.\"",
       "tags": [
         "usuario",
         "snowy_plains",
@@ -30,7 +30,7 @@
       ],
       "dimension": "overworld",
       "createdAt": "2026-03-16T14:16:00.000Z",
-      "updatedAt": "2026-03-16T14:16:00.000Z"
+      "updatedAt": "2026-03-18T14:53:40.154Z"
     },
     {
       "id": "0ea74b79-e2e5-4fa7-8988-a0c545dfc394",
@@ -128,6 +128,26 @@
       "dimension": "overworld",
       "createdAt": "2026-03-17T13:59:58.415Z",
       "updatedAt": "2026-03-17T13:59:58.415Z"
+    },
+    {
+      "id": "2c070cd7-73c5-4ecb-9982-1b8eec2a2198",
+      "name": "Torre da Vigilia",
+      "type": "farm",
+      "x": 7,
+      "z": 156,
+      "description": "Ponto sugerido para mobfarm simples em torre 16x16 com 20 blocos de queda, em novo ramal ao sul da base. Fica a 192 blocos da Casa, suficiente para AFK na base sem ativar a farm.",
+      "tags": [
+        "usuario",
+        "farm",
+        "mob",
+        "torre",
+        "novo-ramal",
+        "sul",
+        "bedrock"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-03-18T14:17:18.251Z",
+      "updatedAt": "2026-03-18T14:17:18.251Z"
     },
     {
       "id": "0decfeef-89fb-417b-a1c8-fffabb6d6848",
