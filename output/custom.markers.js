@@ -126,6 +126,18 @@ UnminedCustomMarkers = {
             font: "bold 18px Calibri,sans serif",
         },
         {
+            x: 7,
+            z: 156,
+            image: "custom.pin.png",
+            imageAnchor: [0.5, 1],
+            imageScale: 0.5,
+            text: "Torre da Vigilia (MobFarm)",
+            textColor: "#fca5a5",
+            offsetX: 0,
+            offsetY: 20,
+            font: "bold 18px Calibri,sans serif",
+        },
+        {
             x: -424,
             z: -184,
             image: "custom.pin.png",
