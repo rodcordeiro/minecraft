@@ -1,3 +1,4 @@
+import path from "node:path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
@@ -16,7 +17,7 @@ const exarotonService = new ExarotonService();
 
 const server = new McpServer({
   name: "mine_mcp",
-  version: "0.1.0"
+  version: "0.2.0"
 });
 
 server.registerResource(
@@ -34,8 +35,10 @@ server.registerResource(
         mimeType: "application/json",
         text: JSON.stringify(
           {
+            workspaceRoot: paths.workspaceRoot,
             worldDir: paths.worldDir,
             outputDir: paths.outputDir,
+            downloadsDir: paths.downloadsDir,
             dataFile: paths.dataFile,
             recipesFile: paths.recipesFile
           },
@@ -68,11 +71,17 @@ server.registerResource(
               "account",
               "list_servers",
               "server_overview",
-              "configured_ram"
+              "configured_ram",
+              "file_info",
+              "text_file",
+              "file_download",
+              "directory_download",
+              "world_download"
             ],
             notes: [
               "The exaroton Node client and official docs expose richer websocket streams for status, stats, heap and tick times.",
-              "This MCP increment currently focuses on safe read-only REST snapshots."
+              "This MCP increment focuses on REST snapshots plus explicit file downloads into the local workspace.",
+              "Download destinations are restricted to the Minecraft workspace root."
             ]
           },
           null,
@@ -153,6 +162,124 @@ server.tool(
         {
           type: "text",
           text: JSON.stringify({ ramGb: ram }, null, 2)
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_get_file_info",
+  "Return exaroton metadata for a file or directory path.",
+  {
+    filePath: z.string().min(1),
+    serverId: z.string().min(1).optional()
+  },
+  async ({ filePath, serverId }) => {
+    const fileInfo = await exarotonService.getFileInfo(filePath, serverId);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(fileInfo, null, 2)
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_get_text_file",
+  "Read a UTF-8 text file from exaroton.",
+  {
+    filePath: z.string().min(1),
+    serverId: z.string().min(1).optional()
+  },
+  async ({ filePath, serverId }) => {
+    const text = await exarotonService.getTextFile(filePath, serverId);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_download_file",
+  "Download a single file from exaroton into the local Minecraft workspace.",
+  {
+    filePath: z.string().min(1),
+    destinationPath: z.string().min(1).optional(),
+    serverId: z.string().min(1).optional()
+  },
+  async ({ filePath, destinationPath, serverId }) => {
+    const resolvedDestinationPath = resolveWorkspacePath(
+      destinationPath ?? path.join("downloads", "exaroton", path.basename(filePath))
+    );
+    const result = await exarotonService.downloadFile(filePath, resolvedDestinationPath, serverId);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(result, null, 2)
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_download_directory",
+  "Download a remote exaroton directory recursively into the local Minecraft workspace.",
+  {
+    remotePath: z.string().min(1),
+    destinationDir: z.string().min(1).optional(),
+    serverId: z.string().min(1).optional()
+  },
+  async ({ remotePath, destinationDir, serverId }) => {
+    const resolvedDestinationDir = resolveWorkspacePath(
+      destinationDir ?? path.join("downloads", "exaroton", path.basename(remotePath))
+    );
+    const result = await exarotonService.downloadDirectory(remotePath, resolvedDestinationDir, serverId);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(result, null, 2)
+        }
+      ]
+    };
+  }
+);
+
+server.tool(
+  "exaroton_download_world",
+  "Download a world directory like world, world_nether or world_the_end from exaroton into the local workspace.",
+  {
+    worldPath: z.string().min(1).optional(),
+    destinationDir: z.string().min(1).optional(),
+    serverId: z.string().min(1).optional()
+  },
+  async ({ worldPath, destinationDir, serverId }) => {
+    const remoteWorldPath = worldPath ?? "world";
+    const resolvedDestinationDir = resolveWorkspacePath(
+      destinationDir ?? path.join("downloads", "exaroton", path.basename(remoteWorldPath))
+    );
+    const result = await exarotonService.downloadDirectory(remoteWorldPath, resolvedDestinationDir, serverId);
+
+    return {
+      content: [
+        {
+          type: "text",
+          text: JSON.stringify(result, null, 2)
         }
       ]
     };
@@ -339,3 +466,15 @@ main().catch((error) => {
   console.error("mine_mcp failed to start", error);
   process.exit(1);
 });
+
+/** Resolves a user-provided destination and rejects paths outside the workspace root. */
+function resolveWorkspacePath(targetPath: string): string {
+  const resolvedPath = path.resolve(paths.workspaceRoot, targetPath);
+  const relativePath = path.relative(paths.workspaceRoot, resolvedPath);
+
+  if (relativePath.startsWith("..") || path.isAbsolute(relativePath)) {
+    throw new Error(`Destination path must stay inside the workspace root: ${paths.workspaceRoot}`);
+  }
+
+  return resolvedPath;
+}

@@ -1,11 +1,12 @@
 {
   "name": "mine_mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "MCP server for Minecraft map points and distance queries.",
+  "description": "MCP server for Minecraft map points, recipes and exaroton world/file access.",
   "main": "dist/index.js",
   "scripts": {
+    "prebuild": "npm run test && npm run typecheck",
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/index.ts",
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
