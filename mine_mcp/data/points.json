@@ -81,8 +81,8 @@
       "id": "cd8f4d4d-459a-4bde-8ebb-eee6b59b7b8f",
       "name": "Forja da Aurora",
       "type": "farm",
-      "x": 140,
-      "z": -150,
+      "x": 188,
+      "z": -81,
       "description": "IronFarm posicionada com distancia segura de vilas e da breeder, voltada a producao automatica de ferro.",
       "tags": [
         "usuario",
@@ -93,7 +93,7 @@
       ],
       "dimension": "overworld",
       "createdAt": "2026-03-17T13:59:58.522Z",
-      "updatedAt": "2026-03-17T13:59:58.522Z"
+      "updatedAt": "2026-04-08T18:03:51.217Z"
     },
     {
       "id": "dcbe586c-2a44-4009-8f17-0a445e2289e6",
@@ -115,8 +115,8 @@
       "id": "c8bb9358-f0a8-478c-b55d-fc59bb0504c0",
       "name": "Reduto dos Colonos",
       "type": "farm",
-      "x": -145,
-      "z": -166,
+      "x": -139,
+      "z": -173,
       "description": "Villager breeder automatizada 5x5, posicionada entre a casa e Alvorada Branca, com distancia segura para reproducao de aldeoes.",
       "tags": [
         "usuario",
@@ -127,7 +127,7 @@
       ],
       "dimension": "overworld",
       "createdAt": "2026-03-17T13:59:58.415Z",
-      "updatedAt": "2026-03-17T13:59:58.415Z"
+      "updatedAt": "2026-04-08T18:04:59.221Z"
     },
     {
       "id": "2c070cd7-73c5-4ecb-9982-1b8eec2a2198",

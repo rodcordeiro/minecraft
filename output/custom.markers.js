@@ -90,8 +90,8 @@ UnminedCustomMarkers = {
             font: "bold 18px Calibri,sans serif",
         },
         {
-            x: -145,
-            z: -166,
+            x: -139,
+            z: -173,
             image: "custom.pin.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.5,
@@ -102,8 +102,8 @@ UnminedCustomMarkers = {
             font: "bold 18px Calibri,sans serif",
         },
         {
-            x: 140,
-            z: -150,
+            x: 188,
+            z: -81,
             image: "custom.pin.png",
             imageAnchor: [0.5, 1],
             imageScale: 0.5,
@@ -186,8 +186,8 @@ UnminedCustomRailways = {
             stations: true,
             points: [
                 [7, -150],
-                [-145, -150],
-                [-145, -166],
+                [-139, -150],
+                [-139, -173],
             ],
         },
         {
@@ -197,7 +197,8 @@ UnminedCustomRailways = {
             stations: true,
             points: [
                 [7, -150],
-                [140, -150],
+                [188, -150],
+                [188, -81],
             ],
         },
         {
@@ -206,8 +207,8 @@ UnminedCustomRailways = {
             width: 3,
             stations: true,
             points: [
-                [-145, -166],
-                [-145, -296],
+                [-139, -173],
+                [-139, -296],
                 [-296, -296],
             ],
         },
@@ -228,8 +229,8 @@ UnminedCustomRailways = {
             width: 3,
             stations: true,
             points: [
-                [140, -150],
-                [140, -360],
+                [188, -81],
+                [188, -360],
                 [344, -360],
             ],
         },
@@ -239,7 +240,8 @@ UnminedCustomRailways = {
             width: 3,
             stations: true,
             points: [
-                [140, -150],
+                [188, -81],
+                [188, -150],
                 [426, -150],
                 [426, -29],
             ],
