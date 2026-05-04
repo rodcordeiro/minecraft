@@ -1,0 +1,24 @@
+2026-05-04 16:10:00 - Nether hub equivalents
+Formula: nether_x = overworld_x / 8, nether_z = overworld_z / 8
+Scope: all registered overworld points and farms in the project map
+
+Points and farms:
+- Abrigo da Geada | Overworld: -424, -184 | Nether: -53, -23
+- Alvorada Branca | Overworld: -296, -296 | Nether: -37, -37
+- Cabana de bruxa | Overworld: 7432, -2840 | Nether: 929, -355
+- Cabana de bruxa 10536 -7096 | Overworld: 10536, -7096 | Nether: 1317, -887
+- Cabana de bruxa 13624 -6856 | Overworld: 13624, -6856 | Nether: 1703, -857
+- Cabana de bruxa 13656 -7656 | Overworld: 13656, -7656 | Nether: 1707, -957
+- Cabana de bruxa 13832 -7096 | Overworld: 13832, -7096 | Nether: 1729, -887
+- Cabana de bruxa 7800 -6824 | Overworld: 7800, -6824 | Nether: 975, -853
+- Casa | Overworld: 7, -36 | Nether: 0.875, -4.5
+- Ermo da Neve | Overworld: -360, 296 | Nether: -45, 37
+- Forja da Aurora | Overworld: 188, -81 | Nether: 23.5, -10.125
+- Pinhal de Valkaria | Overworld: 344, -360 | Nether: 43, -45
+- Reduto dos Colonos | Overworld: -139, -173 | Nether: -17.375, -21.625
+- Torre da Vigilia | Overworld: 7, 156 | Nether: 0.875, 19.5
+- Torre dos Espinhos | Overworld: 426, -29 | Nether: 53.25, -3.625
+- Vila do Brejo Velado | Overworld: 13416, -7336 | Nether: 1677, -917
+
+Highlight:
+- Cabana de bruxa 7800 -6824 maps exactly to Nether 975, -853 and is the reference point for the planned netherhub connection.

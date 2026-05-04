@@ -47,6 +47,76 @@
       "updatedAt": "2026-03-16T14:12:31.767Z"
     },
     {
+      "id": "bb2b9808-2f23-4074-93b3-8bf05c6e493b",
+      "name": "Cabana de bruxa 10536 -7096",
+      "type": "witch_hut",
+      "x": 10536,
+      "z": -7096,
+      "description": "Cabana de bruxa informada pelo usuario nas coordenadas X/Z 10536 ~ -7096.",
+      "tags": [
+        "usuario"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-05-04T16:09:55.841Z",
+      "updatedAt": "2026-05-04T16:09:55.841Z"
+    },
+    {
+      "id": "9044f5b2-dfbc-4b7d-8627-7ac9ac9345d5",
+      "name": "Cabana de bruxa 13624 -6856",
+      "type": "witch_hut",
+      "x": 13624,
+      "z": -6856,
+      "description": "Cabana de bruxa informada pelo usuario nas coordenadas X/Z 13624 ~ -6856.",
+      "tags": [
+        "usuario"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-05-04T16:10:01.188Z",
+      "updatedAt": "2026-05-04T16:10:01.188Z"
+    },
+    {
+      "id": "f2d2ecd9-2dd7-4cd7-b242-57c50f84b832",
+      "name": "Cabana de bruxa 13656 -7656",
+      "type": "witch_hut",
+      "x": 13656,
+      "z": -7656,
+      "description": "Cabana de bruxa informada pelo usuario nas coordenadas X/Z 13656 ~ -7656.",
+      "tags": [
+        "usuario"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-05-04T16:10:11.194Z",
+      "updatedAt": "2026-05-04T16:10:11.194Z"
+    },
+    {
+      "id": "bd9a4717-0634-4153-8d4b-f52f547953b9",
+      "name": "Cabana de bruxa 13832 -7096",
+      "type": "witch_hut",
+      "x": 13832,
+      "z": -7096,
+      "description": "Cabana de bruxa informada pelo usuario nas coordenadas X/Z 13832 ~ -7096.",
+      "tags": [
+        "usuario"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-05-04T16:10:06.513Z",
+      "updatedAt": "2026-05-04T16:10:06.513Z"
+    },
+    {
+      "id": "9a616785-a804-499d-b112-2848b9781eb4",
+      "name": "Cabana de bruxa 7800 -6824",
+      "type": "witch_hut",
+      "x": 7800,
+      "z": -6824,
+      "description": "Cabana de bruxa informada pelo usuario nas coordenadas X/Z 7800 ~ -6824.",
+      "tags": [
+        "usuario"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-05-04T16:09:51.303Z",
+      "updatedAt": "2026-05-04T16:09:51.303Z"
+    },
+    {
       "id": "ee658400-ffee-4646-b67c-bac7af2d7a38",
       "name": "Casa",
       "type": "custom",
@@ -168,6 +238,22 @@
       "dimension": "overworld",
       "createdAt": "2026-03-17T16:21:04.240Z",
       "updatedAt": "2026-03-17T16:21:04.240Z"
+    },
+    {
+      "id": "61649ae1-68ad-4432-9dd5-b5df4ae16a20",
+      "name": "Vila do Brejo Velado",
+      "type": "village",
+      "x": 13416,
+      "z": -7336,
+      "description": "Vila em bioma de pantano, cercada por cabanas de bruxa e registrada pelo usuario para compor a lore dos Pântanos de Névoa Velha.",
+      "tags": [
+        "usuario",
+        "swamp",
+        "tormenta"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-05-04T16:10:14.479Z",
+      "updatedAt": "2026-05-04T16:10:14.479Z"
     }
   ]
 }
