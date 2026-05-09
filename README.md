@@ -16,6 +16,7 @@ Ferramenta base:
 
 ```powershell
 unmined-cli web render --world ".\world" --dimension overworld --output .\output -c --players --shadows 3do -f
+unmined-cli web render --world ".\world" --dimension nether --output .\output\nether -c --players --shadows 3do -f
 ```
 
 ## Personalizações persistentes
