@@ -220,21 +220,19 @@
       "id": "2c070cd7-73c5-4ecb-9982-1b8eec2a2198",
       "name": "Torre da Vigilia",
       "type": "farm",
-      "x": 7,
-      "z": 156,
-      "description": "Ponto sugerido para mobfarm simples em torre 16x16 com 20 blocos de queda, em novo ramal ao sul da base. Fica a 192 blocos da Casa, suficiente para AFK na base sem ativar a farm.",
+      "x": -200,
+      "z": -17,
+      "description": "Mobfarm simples em torre, movida para X -200, Z -17.",
       "tags": [
         "usuario",
         "farm",
         "mob",
         "torre",
-        "novo-ramal",
-        "sul",
         "bedrock"
       ],
       "dimension": "overworld",
       "createdAt": "2026-03-18T14:17:18.251Z",
-      "updatedAt": "2026-03-18T14:17:18.251Z"
+      "updatedAt": "2026-06-08T15:34:26.632Z"
     },
     {
       "id": "0decfeef-89fb-417b-a1c8-fffabb6d6848",
