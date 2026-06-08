@@ -68,6 +68,18 @@ UnminedCustomRailways = {
             ],
         },
         {
+            name: "Ramal Auric Bastion",
+            color: "#facc15",
+            width: 3,
+            stations: true,
+            points: [
+                [7, -36],
+                [7, 156],
+                [17, 156],
+                [17, 195],
+            ],
+        },
+        {
             name: "Linha de Expedicao da Bruxa",
             color: "#e879f9",
             width: 3,

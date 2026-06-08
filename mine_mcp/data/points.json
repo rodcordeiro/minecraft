@@ -33,6 +33,23 @@
       "updatedAt": "2026-03-18T14:53:40.154Z"
     },
     {
+      "id": "499d9419-91d2-45be-86d7-c904d8185557",
+      "name": "Auric Bastion",
+      "type": "farm",
+      "x": 17,
+      "z": 195,
+      "description": "Golden farm registered at X 17, Z 195 with an RPG-style name.",
+      "tags": [
+        "gold",
+        "golden farm",
+        "farm",
+        "rpg-name"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-05T18:39:20.626Z",
+      "updatedAt": "2026-06-05T18:39:20.626Z"
+    },
+    {
       "id": "0ea74b79-e2e5-4fa7-8988-a0c545dfc394",
       "name": "Cabana de bruxa",
       "type": "witch_hut",

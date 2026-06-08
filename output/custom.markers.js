@@ -138,6 +138,18 @@ UnminedCustomMarkers = {
             font: "bold 18px Calibri,sans serif",
         },
         {
+            x: 17,
+            z: 195,
+            image: "custom.pin.png",
+            imageAnchor: [0.5, 1],
+            imageScale: 0.5,
+            text: "Auric Bastion (GoldFarm)",
+            textColor: "#facc15",
+            offsetX: 0,
+            offsetY: 20,
+            font: "bold 18px Calibri,sans serif",
+        },
+        {
             x: -424,
             z: -184,
             image: "custom.pin.png",
@@ -244,6 +256,18 @@ UnminedCustomRailways = {
                 [188, -150],
                 [426, -150],
                 [426, -29],
+            ],
+        },
+        {
+            name: "Ramal Auric Bastion",
+            color: "#facc15",
+            width: 3,
+            stations: true,
+            points: [
+                [7, -36],
+                [7, 156],
+                [17, 156],
+                [17, 195],
             ],
         },
         {
