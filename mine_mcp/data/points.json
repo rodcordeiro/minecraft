@@ -50,6 +50,24 @@
       "updatedAt": "2026-06-05T18:39:20.626Z"
     },
     {
+      "id": "dc3cfdb0-0b75-4ddf-a335-ff53f0e63860",
+      "name": "Bibliotecarios presos",
+      "type": "custom",
+      "x": 9,
+      "z": -253,
+      "description": "Ponto com bibliotecarios presos para troca de esmeraldas.",
+      "tags": [
+        "minecraft",
+        "villagers",
+        "bibliotecarios",
+        "troca",
+        "esmeraldas"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-12T14:46:16.559Z",
+      "updatedAt": "2026-06-12T14:46:16.559Z"
+    },
+    {
       "id": "0ea74b79-e2e5-4fa7-8988-a0c545dfc394",
       "name": "Cabana de bruxa",
       "type": "witch_hut",
