@@ -15,7 +15,7 @@ Workspace para versionar o render do mapa do mundo Minecraft gerado com `uNmINeD
 Ferramenta base:
 
 ```powershell
-unmined-cli web render --world ".\world" --dimension overworld --output .\output -c --players --shadows 3do -f
+unmined-cli web render --world ".\world" --dimension overworld --output .\output -c --players --shadows 3do -f --textures=true
 unmined-cli web render --world ".\world" --dimension nether --output .\output\nether -c --players --shadows 3do -f
 ```
 
