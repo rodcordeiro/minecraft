@@ -33,6 +33,24 @@
       "updatedAt": "2026-03-18T14:53:40.154Z"
     },
     {
+      "id": "8fd10cec-c2b5-46ea-9270-58176b450c18",
+      "name": "Aproximacao Leste Auric Bastion",
+      "type": "custom",
+      "x": 17,
+      "z": 156,
+      "description": "Ponto de aproximacao leste do ramal ferroviario que conecta o eixo sul a Auric Bastion.",
+      "tags": [
+        "minecraft",
+        "ferrovia",
+        "trilho",
+        "auric-bastion",
+        "ramal"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-23T22:18:40.380Z",
+      "updatedAt": "2026-06-23T22:18:40.380Z"
+    },
+    {
       "id": "499d9419-91d2-45be-86d7-c904d8185557",
       "name": "Auric Bastion",
       "type": "farm",
@@ -167,6 +185,24 @@
       "updatedAt": "2026-03-16T17:53:26.604Z"
     },
     {
+      "id": "c8af8179-7662-4175-a757-653d91d6215f",
+      "name": "Eixo Sul da Ferrovia",
+      "type": "custom",
+      "x": 7,
+      "z": 156,
+      "description": "Marco do eixo sul da ferrovia usado no ramal para Auric Bastion, antes da aproximacao leste.",
+      "tags": [
+        "minecraft",
+        "ferrovia",
+        "trilho",
+        "auric-bastion",
+        "eixo-sul"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-23T22:18:40.303Z",
+      "updatedAt": "2026-06-23T22:18:40.303Z"
+    },
+    {
       "id": "a41347d9-0af2-4c78-a0bc-bfe4fd482ec3",
       "name": "Ermo da Neve",
       "type": "village",
@@ -201,6 +237,24 @@
       "updatedAt": "2026-04-08T18:03:51.217Z"
     },
     {
+      "id": "9f26c085-8aa2-4e75-93a2-881284592438",
+      "name": "Generalíssimo Illager",
+      "type": "custom",
+      "x": 212,
+      "z": -615,
+      "description": "Boss Generalíssimo Illager localizado no castelo; coordenada registrada a partir do diário de bordo 004. Y informado na nota: 72.",
+      "tags": [
+        "minecraft",
+        "illager",
+        "boss",
+        "castelo",
+        "era-das-lancas"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-22T21:21:36.613Z",
+      "updatedAt": "2026-06-22T21:21:36.613Z"
+    },
+    {
       "id": "dcbe586c-2a44-4009-8f17-0a445e2289e6",
       "name": "Pinhal de Valkaria",
       "type": "village",
@@ -215,6 +269,60 @@
       "dimension": "overworld",
       "createdAt": "2026-03-16T14:12:31.784Z",
       "updatedAt": "2026-03-16T14:16:00.000Z"
+    },
+    {
+      "id": "4dff772e-60e3-429b-9ca9-ba1a8d531a47",
+      "name": "Primeira Interseccao da Ferrovia",
+      "type": "custom",
+      "x": 7,
+      "z": -150,
+      "description": "Primeiro no compartilhado dos ramais principais da ferrovia, partindo da Casa em X 7 / Z -36.",
+      "tags": [
+        "minecraft",
+        "ferrovia",
+        "trilho",
+        "infraestrutura",
+        "base"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-23T22:18:40.037Z",
+      "updatedAt": "2026-06-23T22:18:40.037Z"
+    },
+    {
+      "id": "9f03b390-2fa8-40be-92c0-f4a613ba087e",
+      "name": "Ramal da Aurora",
+      "type": "custom",
+      "x": 188,
+      "z": -150,
+      "description": "Ponto intermediario da ferrovia rumo a Forja da Aurora, alinhado a partir da primeira interseccao.",
+      "tags": [
+        "minecraft",
+        "ferrovia",
+        "trilho",
+        "ferro",
+        "forja-da-aurora"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-23T22:18:40.237Z",
+      "updatedAt": "2026-06-23T22:18:40.237Z"
+    },
+    {
+      "id": "4aafbf0f-773e-4de9-ad42-83befb4ac690",
+      "name": "Ramal dos Colonos",
+      "type": "custom",
+      "x": -139,
+      "z": -150,
+      "description": "Ponto intermediario da ferrovia rumo ao Reduto dos Colonos, alinhado a partir da primeira interseccao.",
+      "tags": [
+        "minecraft",
+        "ferrovia",
+        "trilho",
+        "villagers",
+        "reduto-dos-colonos"
+      ],
+      "dimension": "overworld",
+      "createdAt": "2026-06-23T22:18:40.154Z",
+      "updatedAt": "2026-06-23T22:18:40.154Z"
     },
     {
       "id": "c8bb9358-f0a8-478c-b55d-fc59bb0504c0",
